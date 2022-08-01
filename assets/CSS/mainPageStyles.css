@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap');
+
+/* CSS reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom colors palette */
+:root {
+  --white: rgb(255, 255, 255);
+  --grey: rgb(224, 224, 224);
+  --black: rgb(0, 0, 0);
+  --blue: rgb(57, 57, 222);
+}
+
+/* Screen bckground */
+html {
+  color: var(--white);
+  font-size: 64%;
+  font-family: 'Lato', sans-serif;
+  width: 105vw;
+  height: 105vh;
+}
+
+body {
+  background: linear-gradient(rgba(17, 17, 17, 0.9), rgba(15, 20, 30, 1)),
+    url(/assets/images/GymBackground.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-position-y: 0px;
+}
+
+/* Main menu >> Header >> Navigation bar */
+header {
+  background-color: rgba(20, 20, 20, 0.2);
+  height: 8vh;
+  width: 100%;
+}
+
+/* "Logo" area */
+.logoItem {
+  letter-spacing: 0.3rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* "Menu" area */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+}
+
+.menu .listItems {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.menu .listItems a {
+  position: relative;
+  color: var(--white);
+  padding: 1.4rem;
+  text-decoration: none;
+  transform: 2ms ease-in;
+}
+
+.menu .listItems a:before {
+  position: absolute;
+  background-color: var(--blue);
+  content: ' ';
+  width: 0px;
+  left: 0px;
+  bottom: 0px;
+  height: 1px;
+  transition: all 0.9s ease;
+}
+
+.menu .listItems a:hover:before {
+  width: 100%;
+}
+
+/* Center - "Main content" area */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vw;
+}
+
+.mainAreaItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Featured text contents */
+.featuredTextA {
+  text-align: center;
+  font-size: 5.5rem;
+  margin-top: -500px;
+  margin-bottom: 2.5rem;
+  width: 845px;
+}
+
+.featuredTextB {
+  font-size: 2.5rem;
+  margin-bottom: 7.5rem;
+  color: var(--grey);
+}
+
+/* Buttons stylization */
+.buttonsArea {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.buttonsArea button {
+  height: 65px;
+  width: 245px;
+  letter-spacing: 0.1rem;
+  border: 1px solid var(--white);
+  color: var(--white);
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  transition: 1.4s;
+  border-radius: 22px;
+}
+
+.buttonsArea button:before {
+  background-color: var(--blue);
+  transition: 1s;
+  width: 0px;
+  height: 62px;
+  border-radius: 21px;
+  content: ' ';
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: -4;
+}
+
+.buttonsArea button:hover{
+  /* border: none; */
+}
+
+.buttonsArea button:hover:before {
+  width: 100%;
+}
